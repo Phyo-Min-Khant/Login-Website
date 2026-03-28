@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --emailcolor: #dee0e2d1;
+    --linkcolor: #d2d7e4cf;
+    --modecolor: rgb(135, 100, 100);
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Container */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login account Start*/
+form {
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
+
+form .username,
+.email,
+.password {
+    background-color: var(--emailcolor);
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+    width: 350px;
+    padding: 10px;
+    margin: 2px;
+}
+
+form .username:focus,
+.email:focus,
+.password:focus {
+    background-color: #dadee1;
+}
+
+
+form .login {
+    margin-top: 10px;
+    width: 350px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: transparent;
+    background-color: rgb(187, 174, 174);
+    color: rgba(0, 0, 0, 0.721);
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+form .login:hover {
+    opacity: 1;
+}
+
+form .forgot {
+    display: block;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+form .link i {
+    margin: 0px 20px;
+}
+
+
+form .link {
+    color: black;
+    margin: 10px;
+    background-color: var(--linkcolor);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+form .link:hover {
+    background-color: #acaeb0cf;
+}
+
+.accountlink {
+    text-decoration: none;
+}
+
+.modecontainer {
+    position: relative;
+    left: 400px;
+    transform: translate(10px,10px);
+    transition: 0.6s;
+    width: 100px;
+}
+
+.mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.mode1,
+.dark,
+.light {
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: var(--modecolor);
+    margin-top: 10px;
+}
+
+.mode1::after {
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 55%;
+    margin: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.dark:hover{
+    background-color: rgb(71, 62, 62);
+}
+
+.light:hover{
+    background-color: rgb(132, 132, 132);
+}
+
+
+.mode a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}

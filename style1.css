@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --emailcolor: #495057;
+    --forgotcolor: #00a8e8;
+    --linkcolor: #334373;
+    --modecolor: rgb(54, 43, 43);
+}
+
+body {
+    background-color: rgb(54, 53, 53);
+}
+
+/* Container */
+.box {
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    transform: translate(7px , 15px);
+    transition: 0.6s;
+}
+
+/* Login account Start*/
+form {
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    transition: 0.6s;
+}
+
+form h1 {
+    color: white;
+}
+
+form .username,.email,.password {
+    background-color: var(--emailcolor);
+    color: white;
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+    width: 350px;
+    padding: 10px;
+    margin: 2px;
+}
+
+form .username:focus,
+.email:focus,
+.password:focus {
+    background-color: #41464b;;
+}
+
+form .login {
+    margin-top: 10px;
+    width: 350px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: transparent;
+    background-color: rgb(128, 128, 128);
+    opacity: 0.6;
+    color: white;
+    transition: 0.4s;
+}
+
+form .login:hover {
+    opacity: 1;
+}
+
+form .forgot {
+    display: block;
+    color: var(--forgotcolor);
+    text-decoration: none;
+    margin-left: 100px;
+    margin-top: 20px;
+}   
+
+form .link i {
+    margin:0px 20px;
+}
+
+
+form .link {
+    color: white;
+    margin: 10px;
+    background-color: var(--linkcolor);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+form .link:hover {
+    background-color: #2b3b6a;
+}
+
+.modecontainer {
+    position: relative;
+    left: 400px;
+    transform: translate(10px,10px);
+    transition: 0.6s;
+    width: 100px;
+}
+
+.mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.mode1,
+.dark,
+.light {
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: var(--modecolor);
+    margin-top: 10px;
+}
+
+.mode1::after {
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 55%;
+    margin: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.dark:hover{
+    background-color: rgb(33, 31, 31);
+}
+
+.light:hover{
+    background-color: rgb(80, 65, 65);
+}
+
+
+.mode a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
